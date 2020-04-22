@@ -59,6 +59,10 @@ print(changing_output)
 plt.plot(lst1)      #to view how the value changes over each iteration
 plt.plot(lst2)
 plt.plot(lst3)
+
+"""
+Added a new comment
+"""
 plt.plot(lst4)
 plt.title('Changing value of outputs vs #iterations')
 plt.savefig('fig1-tsv.png')
