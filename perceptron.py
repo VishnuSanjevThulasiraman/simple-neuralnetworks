@@ -39,7 +39,8 @@ lst2 = []   #each list is to store
 lst3 = []   #the values of the changing_output
 lst4 = []   #after each iteration
 
-for i in range(200):
+for i in range(200): #200 is the epochs you can change the values here to see how the
+                     #accuracy of the network increases as you increase the value of epochs
 
     input = tr_input
     changing_output = sigmoid.value(np.dot(input, w))
@@ -54,16 +55,20 @@ for i in range(200):
 
     w += np.dot(input.T, change)
 
-print('real_output after training')
-print(changing_output)
+"""
+#print('real_output after training')
+#print(changing_output)
 plt.plot(lst1)      #to view how the value changes over each iteration
 plt.plot(lst2)
 plt.plot(lst3)
 
-"""
-Added a new comment
-"""
+This entire snippet is commented since when I call this script as
+a package in the other file, these
+lines get executed
+
+#print(change)
 plt.plot(lst4)
 plt.title('Changing value of outputs vs #iterations')
-plt.savefig('fig1-tsv.png')
-plt.show()
+#plt.savefig('fig1-tsv.png')
+#plt.show()
+"""
