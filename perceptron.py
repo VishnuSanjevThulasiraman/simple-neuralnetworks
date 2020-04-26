@@ -55,16 +55,20 @@ for i in range(200): #200 is the epochs you can change the values here to see ho
 
     w += np.dot(input.T, change)
 
-print('real_output after training')
-print(changing_output)
+"""
+#print('real_output after training')
+#print(changing_output)
 plt.plot(lst1)      #to view how the value changes over each iteration
 plt.plot(lst2)
 plt.plot(lst3)
 
-"""
-Added a new comment
-"""
+This entire snippet is commented since when I call this script as
+a package in the other file, these
+lines get executed
+
+#print(change)
 plt.plot(lst4)
 plt.title('Changing value of outputs vs #iterations')
 #plt.savefig('fig1-tsv.png')
-plt.show()
+#plt.show()
+"""
