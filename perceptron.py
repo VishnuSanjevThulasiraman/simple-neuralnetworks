@@ -39,7 +39,8 @@ lst2 = []   #each list is to store
 lst3 = []   #the values of the changing_output
 lst4 = []   #after each iteration
 
-for i in range(200):
+for i in range(200): #200 is the epochs you can change the values here to see how the
+                     #accuracy of the network increases as you increase the value of epochs
 
     input = tr_input
     changing_output = sigmoid.value(np.dot(input, w))
@@ -65,5 +66,5 @@ Added a new comment
 """
 plt.plot(lst4)
 plt.title('Changing value of outputs vs #iterations')
-plt.savefig('fig1-tsv.png')
+#plt.savefig('fig1-tsv.png')
 plt.show()
