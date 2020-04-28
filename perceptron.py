@@ -45,7 +45,7 @@ for i in range(200): #200 is the epochs you can change the values here to see ho
     input = tr_input
     changing_output = sigmoid.value(np.dot(input, w))
 
-    err = changing_output - tr_changing_output
+    err = tr_changing_output - changing_output
     change = err * sigmoid.dydx(changing_output)
 
     lst1.append(changing_output[0])
