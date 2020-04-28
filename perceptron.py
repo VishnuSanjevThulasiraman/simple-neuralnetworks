@@ -62,9 +62,9 @@ plt.plot(lst1)      #to view how the value changes over each iteration
 plt.plot(lst2)
 plt.plot(lst3)
 
-This entire snippet is commented since when I call this script as
-a package in the other file, these
-lines get executed
+
+This entire snippet is commented since when i call this script as package
+these lines get executed
 
 #print(change)
 plt.plot(lst4)
