@@ -23,16 +23,16 @@ class sigmoid(object):
 
         return x * (1-x)
 
-tr_input = np.array([[0,1,0],
-                            [1,1,0],
-                            [1,0,1],
-                            [0,1,1]])
+tr_input = np.array([[0,0],
+                            [0,1],
+                            [1,0],
+                            [1,1]])
 
-tr_changing_output = np.array([[0,1,1,0]]).T # .T is to take transpose
+tr_changing_output = np.array([[1,1,1,0]]).T # .T is to take transpose
 
 np.random.seed(16)      #generating pseudo random numbers to debug easily
 
-w = 2 * np.random.random((3, 1)) - 1
+w = 2 * np.random.random((2, 1)) - 1
 
 lst1 = []   #lists to generate matplot
 lst2 = []   #each list is to store
@@ -55,9 +55,10 @@ for i in range(200): #200 is the epochs you can change the values here to see ho
 
     w += np.dot(input.T, change)
 
-"""
 #print('real_output after training')
-#print(changing_output)
+
+print(changing_output)
+"""
 plt.plot(lst1)      #to view how the value changes over each iteration
 plt.plot(lst2)
 plt.plot(lst3)
